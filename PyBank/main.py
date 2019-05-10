@@ -45,11 +45,17 @@ with open(pybank_data,'r', newline='') as pybankfile:
     #to calculate the max diff in profit&loss
     max_diffv= max(diff_value)
     #to get the index of the max value
-    month_ref= [i for i, j in enumerate(diff_value) if j == max_diffv]
-    month_refv= int(month_ref[0])
-    #to get the month per month_ref from months list
-    max_month= [j for i, j in enumerate(months) if i == (month_refv+1)]
-    
+    mxmonth_ref= [i for i, j in enumerate(diff_value) if j == max_diffv]
+    mxmonth_refv= int(mxmonth_ref[0])
+    #to get the month per mxmonth_ref from months list
+    max_month= [j for i, j in enumerate(months) if i == (mxmonth_refv+1)]
+    #to calculate the min diff in profit&loss
+    min_diffv= min(diff_value)
+    #to get the index of the min value
+    mimonth_ref= [i for i, j in enumerate(diff_value) if j == min_diffv]
+    mimonth_refv= int(mimonth_ref[0])
+    #to get the month per mimonth_ref from months list
+    min_month= [j for i, j in enumerate(months) if i == (mimonth_refv-1)]
     
 #------------------------------print-----------------------------------------------------    
     print("Financial Analysis")
@@ -59,9 +65,7 @@ with open(pybank_data,'r', newline='') as pybankfile:
     print(f"*Average Value: ${average}")
     print(f"Average Change: $ {average_diffv}")
     print(f"Greatest Increase in Profits: {max_month[0]} (${max_diffv})")
-    
-    
-    #print(f"Greatest Increase in Profits:)
+    print(f"Greatest Decreate in Profits: {min_month[0]} (${min_diffv})")
     
           
     #source[enumeratealistforref]:https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-given-a-list-containing-it-in-python      

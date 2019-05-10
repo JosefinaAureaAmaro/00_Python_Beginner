@@ -1,3 +1,7 @@
+import os
+import csv 
+
+
 # to refer to csv file
 pybank_data= os.path.join('.','homework_03-Python_Instructions_PyBank_Resources_budget_data (1).csv')
 

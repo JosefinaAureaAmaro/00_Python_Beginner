@@ -1,5 +1,5 @@
 import os
-import csv 
+import csv
 
 
 # to refer to csv file
@@ -15,7 +15,7 @@ def TotalsBankData(pyBankData):
 with open(pybank_data,'r', newline='') as pybankfile:
     pyBdata_reader= csv.reader(pybankfile, delimiter=',')
 
-#----------------------------to format data to print------------------------------------------------
+#------------------------------to format data to print---------------------------------
     #variables will be used to create list of date and profit columns
     months=[]
     profit=[]
@@ -29,23 +29,29 @@ with open(pybank_data,'r', newline='') as pybankfile:
         profit_col= columns[1]
         profit.append(profit_col)
     profit.pop(0)
-    #-----------------set final variables to print----------------------------------
+    #-----------------set finale variables to print--------------------------------------
     #to calculate total # of months (-1 is to remove header)
     tot_months=len(months)-1
     #to make profit strings into values 
     profitvalue= [int(x) for x in profit[0:]]
     #to calculate sum of profit and loss
     tot_prof =sum(profitvalue)
+    #to calculate average of profit and loss
+    average= int(tot_prof/len(profitvalue))
+    #to calculate avg diff in profit/loss
+    diff_value= [profitvalue[i+1]-profitvalue[i] for i in range(len(profitvalue)-1)]
+    average_diffv= round(sum(diff_value)/len(diff_value),2)
     
-#--------------------print-----------------------------------------------------------    
+#------------------------------print-----------------------------------------------------    
     print("Financial Analysis")
     print("--------------------------")
     print(f"Total Months: {tot_months}")
     print(f"Total: ${tot_prof}")
-    
+    print(f"*Average Value: ${average}")
+    print(f"Average Change: $ {average_diffv}")
           
           
-           
+    #source[iterate&getlistofdiff]:https://stackoverflow.com/questions/2400840/finding-differences-between-elements-of-a-list     
     #source[covertlistofstrtoint]:https://stackoverflow.com/questions/21493924/is-there-a-way-to-loop-through-a-list-and-convert-everything-to-integers    
     #source[mergedict]:https://stackoverflow.com/questions/5946236/how-to-merge-multiple-dicts-with-same-key
     #source[csvread&write]: https://www.youtube.com/watch?v=q5uM4VKywbA&t=266s ** helped the most

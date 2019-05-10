@@ -5,12 +5,6 @@ import csv
 # to refer to csv file
 pybank_data= os.path.join('.','homework_03-Python_Instructions_PyBank_Resources_budget_data (1).csv')
 
-def TotalsBankData(pyBankData):
-    months = str(pyBankData[0])
-    profits = int(pyBankData[1])
-
-    print(f"Total Months:{months}")
-    print(f"Total: {profits}")
 # to open csv file
 with open(pybank_data,'r', newline='') as pybankfile:
     pyBdata_reader= csv.reader(pybankfile, delimiter=',')

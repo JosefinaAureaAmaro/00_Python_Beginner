@@ -24,8 +24,25 @@ with open(pybank_data,'r', newline='') as pybankfile:
         months.append(datecol)
         profit_col= columns[1]
         profit.append(profit_col)
-    print(months)
-    print(profit)
+    #to calculate total # of months (-1 is to remove header)
+    tot_months=len(months)-1
+    
+    #to calculate sum of profit and loss
+    profit.pop(0)
+    dollars = 0
+    
+    #for values in profit:
+        
+        #tot_profit = 
+   # profit_int=int(profit)
+    #tot_profit= sum(profit)
+   # print(profit_int)
+    
+    #print("Financial Analysis")
+    #print("--------------------------")
+    #print(f"Total Months: {tot_months}")
+    #print(profit)
+    
     
     #profit=[]
     
@@ -67,4 +84,4 @@ with open(pybank_data,'r', newline='') as pybankfile:
     #source[csvread&write]: https://www.youtube.com/watch?v=q5uM4VKywbA&t=266s ** helped the most
     #source[csv&python]:https://www.programiz.com/python-programming/working-csv-files 
     #source[readlines]:https://docs.python.org/2/tutorial/inputoutput.html
-    #source[to identify columns]:https://stackoverflow.com/questions/16503560/read-specific-columns-from-a-csv-file-with-csv-module
+    #source[to identify columns]:https://stackoverflow.com/questions/16503560/read-specific-columns-from-a-csv-file-with-csv-module 

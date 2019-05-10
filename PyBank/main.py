@@ -14,72 +14,39 @@ def TotalsBankData(pyBankData):
 # to open csv file
 with open(pybank_data,'r', newline='') as pybankfile:
     pyBdata_reader= csv.reader(pybankfile, delimiter=',')
-    
+
+#----------------------------to format data to print------------------------------------------------
+    #variables will be used to create list of date and profit columns
     months=[]
     profit=[]
     
     for lines in pyBdata_reader:
+        # to create a list of the date column
         columns=list(lines)
         datecol= columns[0]
         months.append(datecol)
+        # to create a list of the profit column
         profit_col= columns[1]
         profit.append(profit_col)
+    profit.pop(0)
+    #-----------------set final variables to print----------------------------------
     #to calculate total # of months (-1 is to remove header)
     tot_months=len(months)-1
-    
+    #to make profit strings into values 
+    profitvalue= [int(x) for x in profit[0:]]
     #to calculate sum of profit and loss
-    profit.pop(0)
-    dollars = 0
+    tot_prof =sum(profitvalue)
     
-    #for values in profit:
-        
-        #tot_profit = 
-   # profit_int=int(profit)
-    #tot_profit= sum(profit)
-   # print(profit_int)
+#--------------------print-----------------------------------------------------------    
+    print("Financial Analysis")
+    print("--------------------------")
+    print(f"Total Months: {tot_months}")
+    print(f"Total: ${tot_prof}")
     
-    #print("Financial Analysis")
-    #print("--------------------------")
-    #print(f"Total Months: {tot_months}")
-    #print(profit)
-    
-    
-    #profit=[]
-    
-   # for lines_p in pyBdata_reader:
-       # columns_p= list(lines_p)
-       # print(columns_p)
-        #datecol_p= columns_p[1]
-        #profit.append(datecol_p)
-    #print(profit)
-       
-        
-   # print(lines)
-        
-        #Concat_list_col= Datecol + lines
-        #print(concat_list_col)
-        #for items in columns:
-            #print(items)
-        
-    
-    #header= next(pyBdata_reader)
-    
-    #to print the number of months :3
-    #list_sum=0
-    #for lines in pyBdata_reader:
-       # print(lines,)
-        #TotalsBankData(lines)
-        
-        
-        #list_sum = list_sum + (len(lines))/2 
-    #print("Financial Analysis")
-    #print("--------------------------------")
-   # print(f'Total Months: {list_sum}')  
-                
           
           
            
-        
+    #source[covertlistofstrtoint]:https://stackoverflow.com/questions/21493924/is-there-a-way-to-loop-through-a-list-and-convert-everything-to-integers    
     #source[mergedict]:https://stackoverflow.com/questions/5946236/how-to-merge-multiple-dicts-with-same-key
     #source[csvread&write]: https://www.youtube.com/watch?v=q5uM4VKywbA&t=266s ** helped the most
     #source[csv&python]:https://www.programiz.com/python-programming/working-csv-files 

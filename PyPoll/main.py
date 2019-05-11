@@ -27,8 +27,15 @@ with open(pypoll_data,'r', newline='') as pypollfile:
     
     #to calculate total num of votes
     tot_votes=len(votes)
+
+    #------to print to txt file-----------------
+import sys
+
+pypolltxt_path = os.path.join('.','pypoll.txt')
+with open(pypolltxt_path,'w') as pypolltxt_file:
+    sys.stdout = pypolltxt_file
     
-    #print first set of a format and statements
+     #print statements
     print("Election Results")
     print("----------------------")
     print(f"Total Votes: {tot_votes}")
@@ -59,6 +66,7 @@ with open(pypoll_data,'r', newline='') as pypollfile:
     #to get the candidate per the max index value
     winner = list_candidates[maxvote_ref]
     
+    #print statements
     print("---------------------")
     print(f"Winner: {winner}")
     print("---------------------")

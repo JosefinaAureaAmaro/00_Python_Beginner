@@ -25,7 +25,7 @@ with open(pybank_data,'r', newline='') as pybankfile:
     months.pop(0)
     profit.pop(0)
     #-----------------set finale variables to print--------------------------------------
-    #to calculate total # of months (-1 is to remove header)
+    #to calculate total # of months
     tot_months=len(months)
     #to make profit strings into values 
     profitvalue= [int(x) for x in profit[0:]]

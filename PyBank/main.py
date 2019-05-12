@@ -49,8 +49,25 @@ with open(pybank_data,'r', newline='') as pybankfile:
     mimonth_refv= int(mimonth_ref[0])
     #to get the month per mimonth_ref from months list
     min_month= [j for i, j in enumerate(months) if i == (mimonth_refv-1)]
+    
+    resultss= (f"Financial Analysis\n--------------------------\r\nTotal Months: {tot_months}\r\nTotal: ${tot_prof}\r\nAverage Value: ${average}\r\nAverage Change: $ {average_diffv}\r\nGreatest Increase in Profits: {max_month[0]} (${max_diffv})\r\nGreatest Decreate in Profits: {min_month[0]} (${min_diffv})")
+
+    
+    #print("Financial Analysis")
+    #print("--------------------------")
+    #print(f"Total Months: {tot_months}")
+    #print(f"Total: ${tot_prof}")
+    #print(f"*Average Value: ${average}")
+    #print(f"Average Change: $ {average_diffv}")
+    #print(f"Greatest Increase in Profits: {max_month[0]} (${max_diffv})")
+    #print(f"Greatest Decreate in Profits: {min_month[0]} (${min_diffv})")
+
+    
+print(resultss)
+    
+    
  
-#-------------to print to a .txt file-------
+    #-------------to print to a .txt file-------
 
 import sys
 
@@ -58,17 +75,9 @@ pybanktxt_path = os.path.join('.','pybank.txt')
 with open(pybanktxt_path,'w') as pybanktxt_file:
     sys.stdout = pybanktxt_file
 
-
+    print(resultss)
 
 #------------------------------print-----------------------------------------------------    
-    print("Financial Analysis")
-    print("--------------------------")
-    print(f"Total Months: {tot_months}")
-    print(f"Total: ${tot_prof}")
-    print(f"*Average Value: ${average}")
-    print(f"Average Change: $ {average_diffv}")
-    print(f"Greatest Increase in Profits: {max_month[0]} (${max_diffv})")
-    print(f"Greatest Decreate in Profits: {min_month[0]} (${min_diffv})")
 
 
     #source[howtoprinttoafile]:https://stackoverflow.com/questions/4110891/how-to-redirect-the-output-of-print-to-a-txt-file      

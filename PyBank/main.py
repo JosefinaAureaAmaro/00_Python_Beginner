@@ -50,7 +50,7 @@ with open(pybank_data,'r', newline='') as pybankfile:
     #to get the month per mimonth_ref from months list
     min_month= [j for i, j in enumerate(months) if i == (mimonth_refv-1)]
     
-    resultss= (f"Financial Analysis\n--------------------------\r\nTotal Months: {tot_months}\r\nTotal: ${tot_prof}\r\nAverage Value: ${average}\r\nAverage Change: $ {average_diffv}\r\nGreatest Increase in Profits: {max_month[0]} (${max_diffv})\r\nGreatest Decreate in Profits: {min_month[0]} (${min_diffv})")
+    resultss= (f"Financial Analysis\n--------------------------\nTotal Months: {tot_months}\nTotal: ${tot_prof}\nAverage Value: ${average}\nAverage Change: $ {average_diffv}\nGreatest Increase in Profits: {max_month[0]} (${max_diffv})\nGreatest Decreate in Profits: {min_month[0]} (${min_diffv})")
 
     
     #print("Financial Analysis")

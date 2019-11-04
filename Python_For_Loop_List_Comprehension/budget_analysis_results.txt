@@ -1,0 +1,15 @@
+Financial Analysis
+
+                    --------------------------
+
+                    Total Months: 86
+
+                    Total: $38382578
+
+                    Average Profit Value: $446309.0
+
+                    Average Profit Variance: $ -2315.12
+
+                    Largest Increase in Profitability: Jan-12 ($1926159)
+
+                    Largest Descrease in Profitability: Aug-13 ($-2196167)

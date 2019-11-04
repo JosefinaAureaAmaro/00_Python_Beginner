@@ -44,16 +44,18 @@ with open(data,'r', newline='') as budget_file:
     ## Profit & Loss Value Review ##
 
     # Reformat Data: convert profit value strings to intergers
-    profit_value = [int(x) for x in profit]
+    profit_values = [int(x) for x in profit]
 
     # to calculate sum of profit&loss
-    tot_prof = profit_value.sum()
+    tot_prof = sum(profit_values)
 
     # to calculate average of profit&loss
     average_profit = round((tot_prof/ tot_months), 0)
 
+    # to make list of values for list comprehension 
+
     # to calculate avg variance in profit&loss month over month
-    profit_variance = [profit_value[i+1] - profit_value[i] for i in range(tot_months)]
+    profit_variance = [profit_values[i+1] - profit_values[i] for i in range((tot_months -1))]
 
     # to calcualte average profit variance
     average_profit_variance = round( sum(profit_variance)/len(profit_variance) ,2)

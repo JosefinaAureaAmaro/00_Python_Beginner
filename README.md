@@ -12,7 +12,7 @@
 </div>
 
 <h2> Code Samples 📓</h2>
-<p> Sample from: Python_For_and_While_Loops</p>
+<p><b> Sample from:</b> Python_For_and_While_Loops</p>
 
 ```python
     # Objectives: 
@@ -36,7 +36,7 @@
         i += 1
  ```
 
-<p> Sample from: Python_For_Loop_List_Comprehension</p>
+<p><b> Sample from:</b> Python_For_Loop_List_Comprehension</p>
 
 ```python 
  #----------------- Budget Analysis --------------------------------------

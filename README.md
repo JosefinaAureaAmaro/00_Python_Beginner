@@ -39,7 +39,7 @@
 <p><b> Sample from:</b> Python_For_Loop_List_Comprehension</p>
 
 ```python 
- #----------------- Budget Analysis --------------------------------------
+ #----------------- Budget Analysis Examples--------------------------------------
  
     # Reformat Data: convert profit value strings to intergers
     profit_values = [int(x) for x in profit]

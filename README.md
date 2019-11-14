@@ -36,3 +36,39 @@
         i += 1
  ```
 
+<p> Sample from: Python_For_Loop_List_Comprehension</p>
+
+```python 
+ #----------------- Budget Analysis --------------------------------------
+ 
+    # Reformat Data: convert profit value strings to intergers
+    profit_values = [int(x) for x in profit]
+    
+    # to calculate avg variance in profit&loss month over month
+    profit_variance = [profit_values[i+1] - profit_values[i] for i in range((tot_months -1))]
+    
+    ## Analysis Results
+        budget_analysis_results = (f"""Financial Analysis\n
+                    --------------------------\n
+                    Total Months: {tot_months}\n
+                    Total: ${tot_prof}\n
+                    Average Profit Value: ${average_profit}\n
+                    Average Profit Variance: $ {average_profit_variance}\n
+                    Largest Increase in Profitability: {month_of_max_profit_variance} (${max_profit_variance})\n
+                    Largest Descrease in Profitability: {month_of_min_profit_variance} (${min_profit_variance})""")
+
+    
+        print(budget_analysis_results)
+    
+    
+ 
+    #-------------to print budget analysis to a .txt file-------
+
+        import sys
+
+        budget_data_path = os.path.join('.','budget_analysis_results.txt')
+        with open(budget_data_path,'w') as budget_analysis_file:
+            sys.stdout = budget_analysis_file
+
+            print(budget_analysis_results)
+```

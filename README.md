@@ -35,6 +35,10 @@
         
         i += 1
  ```
+<div align="center">
+<a href="https://github.com/JosefinaAureaAmaro/00_Python_Beginner/blob/master/Python_For_and_While_Loops/election_analysis.py">
+<img src="https://github.com/JosefinaAureaAmaro/00_Python_Beginner/blob/master/images/code_click_img.PNG"></a>
+</div>
 
 <p><b> Sample from:</b> Python_For_Loop_List_Comprehension</p>
 
@@ -72,3 +76,7 @@
 
             print(budget_analysis_results)
 ```
+<div align="center">
+<a href="https://github.com/JosefinaAureaAmaro/00_Python_Beginner/blob/master/Python_For_and_While_Loops/election_analysis.py">
+<img src="https://github.com/JosefinaAureaAmaro/00_Python_Beginner/blob/master/images/code_click_img.PNG"></a>
+</div>
